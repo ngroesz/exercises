@@ -1,3 +1,7 @@
+/* Just your standard binary-tree implementation
+ * I mostly saved this off because it was a demonstration of the regex library (in the read_file() function)
+*/
+
 #include <regex>
 #include <iostream>
 #include <fstream>
