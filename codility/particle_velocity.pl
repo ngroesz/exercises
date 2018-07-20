@@ -22,7 +22,7 @@ sub solution {
             $stable_periods = 0;
         }
 
-        if ($stable_periods > 1_000_000_000) {
+        if ($total_stable_periods > 1_000_000_000) {
             return -1;
         }
 
@@ -33,12 +33,6 @@ sub solution {
     return $total_stable_periods;
 }
 
-my @velocities = (-1, 1, 3, 3, 3, 2, 3, 2, 1, 0);
-print solution(@velocities) . "\n";
+print solution((-1, 1, 3, 3, 3, 2, 3, 2, 1, 0)) . "\n";
 
-@velocities = ();
-
-for (my $i = 0; $i < 10_000; ++$i) {
-    push(@velocities, 2);
-}
-print solution(@velocities) . "\n";
+print solution((2) x 10_000) . "\n";
