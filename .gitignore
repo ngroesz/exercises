@@ -1,2 +1,9 @@
+C/C++
 *.out
+
+vim
 *.swp
+
+Java
+*.class
+*.jar

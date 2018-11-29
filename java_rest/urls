@@ -1,0 +1,6 @@
+    GET     /users (com.groesz.resources.UserResource)
+    POST    /users (com.groesz.resources.UserResource)
+    DELETE  /users/{id} (com.groesz.resources.UserResource)
+    GET     /users/{id} (com.groesz.resources.UserResource)
+    PUT     /users/{id} (com.groesz.resources.UserResource)
+
