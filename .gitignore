@@ -1,9 +1,9 @@
-C/C++
+# C/C++
 *.out
 
-vim
+# vim
 *.swp
 
-Java
+# Java
 *.class
 *.jar
