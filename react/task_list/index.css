@@ -1,0 +1,32 @@
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: black;
+}
+
+li.group {
+    list-style-image: url(Group.svg);
+}
+
+li.complete {
+    list-style-image: url(Completed.svg);
+}
+
+li.incomplete {
+    list-style-image: url(Incomplete.svg);
+}
+
+li.locked {
+    list-style-image: url(Locked.svg);
+}
+
+div.todo {
+    width: 400px;
+}
+
+div.heading {
+    float: left;
+    font-size: 200%;
+}
