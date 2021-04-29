@@ -13,7 +13,7 @@ int string_length(const char *string)
 {
     const char *s;
     s = string;
-    while (*(++s));
+    while (*(s++));
 
     return (s - string);
 }
