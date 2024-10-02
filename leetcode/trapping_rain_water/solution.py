@@ -1,23 +1,23 @@
 # https://leetcode.com/problems/trapping-rain-water/description/
 
+# there is a runtime issue with this solution
+# it fails submission with an input of some 30,000 elements
+# one inefficieny is that it repeatedly takes max(), often iterating over the same elements
+# one possible improvement is to find the max height in the array and work outwards from there,
+# keeping track of left and right iterators. i think that this could elimiate the issue of
+# repeatedly calling max()
+
 import pdb
 
 from typing import List
 
 
 class Solution:
-    @classmethod
-    def max_height_in_range(cls, height: List[int], left: int, right: int) -> int:
-      if (right > left):
-        return max(height[left:right])
-      else:
-        return 0
-
     def trap(self, height: List[int]) -> int:
       rain_count: int = 0
-      for x_index in range(0, len(height)):
-        left_highest = Solution.max_height_in_range(height, 0, x_index)
-        right_highest = Solution.max_height_in_range(height, x_index+1, len(height))
+      for x_index in range(1, len(height) - 1):
+        left_highest = max(height[0:x_index])
+        right_highest = max(height[x_index+1:len(height)])
         rain = min(left_highest, right_highest) - height[x_index]
 
         if rain > 0:
